@@ -10,4 +10,4 @@ app = express()
 app.use(express.json())
 app.use('/', routess)
 
-server = app.listen(80, () => console.log("listening on http://" + server.address().address + ":" + server.address().port))
+server = app.listen(process.env.port, () => console.log("listening on http://" + server.address().address + ":" + server.address().port))
