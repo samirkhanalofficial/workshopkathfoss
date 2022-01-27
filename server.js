@@ -9,7 +9,7 @@ mongo.connect("mongodb://localhost:27017/workshop").then(() => {
 app = express()
 app.use(express.json())
 app.use('/', routess)
-port = 80 || process.env.PORT
+port = process.env.PORT || 3000
 server = app.listen(port, () => console.log("listening on http://" + server.address().address + ":" + server.address().port))
 
 //end
