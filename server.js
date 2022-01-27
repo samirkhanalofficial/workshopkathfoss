@@ -1,7 +1,7 @@
 const express = require('express')
 const routess = require('./routers')
 const mongo = require('mongoose')
-mongo.connect("mongodb://localhost:27017/workshop").then(() => {
+mongo.connect("mongodb+srv://samirlure161:Samir123@cluster0.z4kqw.mongodb.net/workshop").then(() => {
     console.log("database connected")
 }).catch((err) => {
     console.log("error connecting to database")
