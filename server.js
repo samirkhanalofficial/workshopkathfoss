@@ -19,4 +19,4 @@ app.get('/favicon.ico', (req, res) => {
 
     res.sendFile('./assets/favicon.ico')
 })
-server = app.listen(process.env.port || 80, () => console.log("listening on http://" + server.address().address + ":" + server.address().port))
+server = app.listen(process.env.port, () => console.log("listening on http://" + server.address().address + ":" + server.address().port))
