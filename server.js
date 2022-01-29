@@ -1,6 +1,7 @@
 const express = require('express')
 const routess = require('./routers')
 const mongo = require('mongoose')
+const cors=require('cors')
 const { get } = require('express/lib/response')
 mongo.connect("mongodb+srv://samirlure161:Samir123@cluster0.z4kqw.mongodb.net/workshop").then(() => {
     console.log("database connected")
@@ -9,6 +10,7 @@ mongo.connect("mongodb+srv://samirlure161:Samir123@cluster0.z4kqw.mongodb.net/wo
 })
 app = express()
 app.use(express.json())
+app.use(cors("*"))
 app.use('/', routess)
 
 app.get('/', (req, res) => {
