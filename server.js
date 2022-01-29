@@ -3,7 +3,7 @@ const routess = require('./routers')
 const mongo = require('mongoose')
 const cors=require('cors')
 const { get } = require('express/lib/response')
-mongo.connect("mongodb+srv://samirlure161:Samir123@cluster0.z4kqw.mongodb.net/workshop").then(() => {
+mongo.connect(process.env.MONGOURL).then(() => {
     console.log("database connected")
 }).catch((err) => {
     console.log("error connecting to database")
