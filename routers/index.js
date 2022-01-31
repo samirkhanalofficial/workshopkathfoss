@@ -54,7 +54,7 @@ const deleteUser = async(req, res) => {
 
     if ('email' in req.params && 'password' in req.params) {
         var email = req.params.email
-        var password = md5(req.params.password)
+        var password = req.params.password
         await userSchema.deleteOne({
             email: email,
             password: password
