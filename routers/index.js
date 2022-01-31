@@ -15,7 +15,7 @@ const editUser = async(req, res) => {
     if ('email' in req.params && 'password' in req.params && 'name' in req.params) {
         var email = req.params.email
         var name = req.params.name
-        var password = md5(req.params.password)
+        var password = req.params.password
         await userSchema.findOneAndReplace({
             email: email,
             password: password
